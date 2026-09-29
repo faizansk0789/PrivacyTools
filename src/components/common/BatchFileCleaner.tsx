@@ -36,7 +36,7 @@ interface BatchFileCleanerProps {
   acceptedFormats?: string[];
   acceptedMimeTypes?: string[];
   maxSizeBytes?: number;
-  sampleType?: 'image' | 'pdf' | 'doc' | 'any' | 'none';
+  sampleType?: 'image' | 'pdf' | 'doc' | 'doc-and-pdf' | 'any' | 'none';
   accentColor?: 'indigo' | 'blue' | 'fuchsia';
   toolName?: string;
 }

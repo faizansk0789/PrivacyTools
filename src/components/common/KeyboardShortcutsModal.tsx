@@ -43,7 +43,7 @@ export const KEYBOARD_SHORTCUTS: ShortcutGroup[] = [
     items: [
       {
         keys: ['G', 'P'],
-        description: 'Password Generator (Strong & Passphrase)',
+        description: 'Password, Passphrase & Username Generator',
         path: '/tools/password-generator',
         icon: KeyRound,
       },
@@ -55,8 +55,8 @@ export const KEYBOARD_SHORTCUTS: ShortcutGroup[] = [
       },
       {
         keys: ['G', 'D'],
-        description: 'PDF Metadata Cleaner',
-        path: '/tools/pdf-metadata-cleaner',
+        description: 'PDF & Document Metadata Cleaner',
+        path: '/tools/document-metadata-cleaner',
         icon: FileText,
       },
       {

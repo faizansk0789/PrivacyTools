@@ -237,13 +237,13 @@ export const PasswordGenView: React.FC<PasswordGenViewProps> = ({ onNavigate }) 
       <div className="text-center space-y-3">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 text-xs font-bold tracking-wider uppercase shadow-sm">
           <KeyRound className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-          <span>CRYPTOGRAPHIC KEY SYNTHESIS</span>
+          <span>CRYPTOGRAPHIC IDENTITY & KEY GENERATOR</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-          Secure Password & Passphrase Generator
+          Password, Passphrase & Username Generator
         </h1>
         <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-          Generate cryptographically uncrackable passwords, Diceware multi-word passphrases, and pseudonymous aliases in your browser with hardware-level entropy.
+          Generate cryptographically secure passwords, high-entropy Diceware passphrases, and anonymous privacy pseudonyms all in one unified browser utility.
         </p>
         <div className="pt-2 flex justify-center">
           <TrustBadge type="local" showExplanation />

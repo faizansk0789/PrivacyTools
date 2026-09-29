@@ -74,13 +74,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenFeedback }) =>
                 </button>
               </li>
               <li>
-                <button onClick={() => { playPop(); onNavigate('/tools/pdf-metadata-cleaner'); }} className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-left cursor-pointer">
-                  PDF Metadata Cleaner
-                </button>
-              </li>
-              <li>
-                <button onClick={() => { playPop(); onNavigate('/tools/doc-metadata-cleaner'); }} className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-left cursor-pointer">
-                  Document Metadata Cleaner
+                <button onClick={() => { playPop(); onNavigate('/tools/document-metadata-cleaner'); }} className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-left cursor-pointer">
+                  PDF & Document Cleaner
                 </button>
               </li>
               <li>
@@ -90,7 +85,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenFeedback }) =>
               </li>
               <li>
                 <button onClick={() => { playPop(); onNavigate('/tools/password-generator'); }} className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-left cursor-pointer">
-                  Password Generator
+                  Password, Passphrase & Username
                 </button>
               </li>
             </ul>
@@ -217,7 +212,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenFeedback }) =>
 
         {/* Bottom Metadata: Copyright, security architecture links, and quick utility links */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400 font-medium">
-          <p>© 2026 PrivacyKit. Built with privacy in mind.</p>
+          <div className="flex flex-wrap items-center gap-3">
+            <p>© 2026 PrivacyKit. Built with privacy in mind.</p>
+            <a
+              href="https://github.com/faizansk0789/PrivacyTools/actions/workflows/main.yml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center hover:opacity-80 transition-opacity"
+              title="GitHub Workflow Build Status"
+            >
+              <img
+                src="https://github.com/faizansk0789/PrivacyTools/actions/workflows/main.yml/badge.svg?branch=main"
+                alt=".github/workflows/main.yml build status"
+                className="h-4.5 rounded"
+              />
+            </a>
+          </div>
           <div className="flex flex-wrap items-center gap-5">
             <span className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400">
               <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />

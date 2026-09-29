@@ -58,30 +58,17 @@ export const TOOLS_CATALOG: ToolDefinition[] = [
     tags: ['video', 'mp4', 'mov', 'metadata', 'udta', 'clean']
   },
   {
-    id: 'pdf-metadata-cleaner',
-    name: 'PDF Metadata Cleaner',
-    shortDesc: 'Remove unnecessary metadata and author tags from PDF files.',
-    description: 'Erase document author names, computer usernames, PDF creation engines, modification timestamps, and internal keywords before publishing.',
+    id: 'document-metadata-cleaner',
+    name: 'PDF & Document Metadata Cleaner',
+    shortDesc: 'Scrub metadata, authors, and timestamps from PDF, DOCX, XLSX, and PPTX files.',
+    description: 'Erase document author names, computer usernames, corporate tags, revision histories, and modification timestamps from PDFs and Office documents before publishing.',
     category: 'Documents',
     iconName: 'FileText',
-    path: '/tools/pdf-metadata-cleaner',
+    path: '/tools/document-metadata-cleaner',
     processingType: 'local',
     featured: true,
-    supportedFormats: ['PDF'],
-    tags: ['pdf', 'document', 'author', 'sanitize', 'strip', 'clean', 'producer', 'dates']
-  },
-  {
-    id: 'doc-metadata-cleaner',
-    name: 'Document Metadata Cleaner',
-    shortDesc: 'Clean metadata from supported office documents (DOCX, XLSX, PPTX).',
-    description: 'Inspect and purge revision histories, company tags, collaborator names, and editing durations from Word, Excel, and PowerPoint documents.',
-    category: 'Documents',
-    iconName: 'FileSpreadsheet',
-    path: '/tools/doc-metadata-cleaner',
-    processingType: 'local',
-    featured: true,
-    supportedFormats: ['DOCX', 'XLSX', 'PPTX'],
-    tags: ['word', 'excel', 'powerpoint', 'office', 'docx', 'xlsx', 'pptx', 'clean']
+    supportedFormats: ['PDF', 'DOCX', 'XLSX', 'PPTX'],
+    tags: ['pdf', 'document', 'word', 'excel', 'powerpoint', 'office', 'docx', 'xlsx', 'pptx', 'author', 'sanitize', 'strip', 'clean', 'producer', 'dates']
   },
   {
     id: 'url-privacy-cleaner',
@@ -99,39 +86,16 @@ export const TOOLS_CATALOG: ToolDefinition[] = [
   },
   {
     id: 'password-generator',
-    name: 'Password Generator',
-    shortDesc: 'Generate cryptographically secure, high-entropy random passwords.',
-    description: 'Generate uncrackable passwords using hardware-backed cryptographic randomness with instant entropy calculations and character rules.',
+    name: 'Password, Passphrase & Username Generator',
+    shortDesc: 'Generate secure passwords, Diceware passphrases, and anonymous pseudonyms.',
+    description: 'Generate uncrackable passwords, memorable Diceware phrases, and privacy-preserving pseudonym handles using client-side cryptographic randomness.',
     category: 'Security',
     iconName: 'KeyRound',
     path: '/tools/password-generator',
     processingType: 'local',
-    featured: false,
-    tags: ['password', 'generator', 'security', 'entropy', 'keys', 'random', 'crypto']
-  },
-  {
-    id: 'passphrase-generator',
-    name: 'Passphrase Generator',
-    shortDesc: 'Generate memorable, high-security multi-word passphrases.',
-    description: 'Create memorable Diceware-style multi-word passphrases that resist brute force attacks while remaining easy for humans to type.',
-    category: 'Security',
-    iconName: 'Lock',
-    path: '/tools/password-generator?tab=passphrase',
-    processingType: 'local',
-    featured: false,
-    tags: ['passphrase', 'diceware', 'words', 'security', 'memorable']
-  },
-  {
-    id: 'username-generator',
-    name: 'Random Username Generator',
-    shortDesc: 'Generate anonymous, non-identifying aliases for online services.',
-    description: 'Create privacy-preserving pseudonym handles to prevent cross-site identity linkage when registering on forums and platforms.',
-    category: 'Security',
-    iconName: 'UserCheck',
-    path: '/tools/password-generator?tab=username',
-    processingType: 'local',
-    featured: false,
-    tags: ['username', 'pseudonym', 'alias', 'anon', 'identity']
+    featured: true,
+    supportedFormats: ['Passkeys', 'Passphrases', 'Aliases'],
+    tags: ['password', 'passphrase', 'username', 'generator', 'security', 'entropy', 'diceware', 'pseudonym', 'keys', 'random', 'crypto']
   }
 ];
 

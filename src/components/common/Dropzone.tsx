@@ -13,7 +13,7 @@ export interface DropzoneProps {
   title?: string;
   subtitle?: string;
   maxSizeBytes?: number; // default 50MB
-  sampleType?: 'image' | 'pdf' | 'doc' | 'any' | 'none';
+  sampleType?: 'image' | 'pdf' | 'doc' | 'doc-and-pdf' | 'any' | 'none';
   isLoading?: boolean;
   accentColor?: 'indigo' | 'blue' | 'fuchsia';
   icon?: React.ReactNode;
@@ -397,7 +397,7 @@ export const Dropzone: React.FC<DropzoneProps> = ({
               <span>Sample Photo (GPS + Camera)</span>
             </button>
           )}
-          {(sampleType === 'pdf' || sampleType === 'any') && (
+          {(sampleType === 'pdf' || sampleType === 'doc-and-pdf' || sampleType === 'any') && (
             <button
               type="button"
               onClick={(e) => {
@@ -411,7 +411,7 @@ export const Dropzone: React.FC<DropzoneProps> = ({
               <span>Sample PDF (Author + Timestamps)</span>
             </button>
           )}
-          {(sampleType === 'doc' || sampleType === 'any') && (
+          {(sampleType === 'doc' || sampleType === 'doc-and-pdf' || sampleType === 'any') && (
             <button
               type="button"
               onClick={(e) => {

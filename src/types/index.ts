@@ -1,6 +1,8 @@
 export type ToolId = 
   | 'privacy-checkup'
   | 'exif-remover'
+  | 'document-metadata-cleaner'
+  | 'document-pdf-cleaner'
   | 'pdf-metadata-cleaner'
   | 'doc-metadata-cleaner'
   | 'url-privacy-cleaner'

@@ -538,11 +538,11 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
                       <span className="text-[11px] font-bold text-slate-800 dark:text-slate-200">Clean Photos</span>
                     </button>
                     <button
-                      onClick={() => onNavigate('/tools/pdf-metadata-cleaner')}
+                      onClick={() => onNavigate('/tools/document-metadata-cleaner')}
                       className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 hover:bg-sky-50 dark:hover:bg-sky-950/40 border border-slate-200 dark:border-slate-800 text-center transition-all cursor-pointer group"
                     >
                       <FileText className="w-4 h-4 mx-auto mb-1 text-sky-500 group-hover:scale-110 transition-transform" />
-                      <span className="text-[11px] font-bold text-slate-800 dark:text-slate-200">Clean PDFs</span>
+                      <span className="text-[11px] font-bold text-slate-800 dark:text-slate-200">PDF & Docs</span>
                     </button>
                     <button
                       onClick={() => onNavigate('/tools/url-privacy-cleaner')}

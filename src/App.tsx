@@ -12,8 +12,7 @@ import { FeedbackModal } from './components/common/FeedbackModal';
 import { HomeView } from './views/HomeView';
 import { PrivacyCheckupView } from './views/PrivacyCheckupView';
 import { ExifRemoverView } from './views/ExifRemoverView';
-import { PdfCleanerView } from './views/PdfCleanerView';
-import { DocCleanerView } from './views/DocCleanerView';
+import { UnifiedDocCleanerView } from './views/UnifiedDocCleanerView';
 import { UrlCleanerView } from './views/UrlCleanerView';
 import { PasswordGenView } from './views/PasswordGenView';
 import { ToolsDirectoryView } from './views/ToolsDirectoryView';
@@ -190,15 +189,20 @@ export default function App() {
         desc: 'Inspect and strip GPS latitude/longitude, camera specs, device serial numbers, and timestamps from photos before uploading.',
         canonical: 'https://privacykit.in/tools/exif-remover'
       },
+      '/tools/document-metadata-cleaner': {
+        title: 'PDF & Document Metadata Cleaner (PDF, Word, Excel, PPT) — PrivacyKit',
+        desc: 'Sanitize author identities, creation timestamps, corporate company tags, and edit histories from PDF and Office documents in your browser.',
+        canonical: 'https://privacykit.in/tools/document-metadata-cleaner'
+      },
       '/tools/pdf-metadata-cleaner': {
-        title: 'PDF Metadata Cleaner & Author Anonymizer — PrivacyKit',
-        desc: 'Strip author names, corporate titles, software signatures, creation dates, and edit history from PDF documents locally.',
-        canonical: 'https://privacykit.in/tools/pdf-metadata-cleaner'
+        title: 'PDF & Document Metadata Cleaner — PrivacyKit',
+        desc: 'Strip author names, corporate titles, software signatures, creation dates, and edit history from PDF and Office documents locally.',
+        canonical: 'https://privacykit.in/tools/document-metadata-cleaner'
       },
       '/tools/doc-metadata-cleaner': {
-        title: 'Office Document Metadata Cleaner (Word, Excel, PowerPoint) — PrivacyKit',
-        desc: 'Scrub author identities, revision traces, template filepaths, and company info from DOCX, XLSX, and PPTX files.',
-        canonical: 'https://privacykit.in/tools/doc-metadata-cleaner'
+        title: 'Office Document & PDF Metadata Cleaner — PrivacyKit',
+        desc: 'Scrub author identities, revision traces, template filepaths, and company info from DOCX, XLSX, PPTX, and PDF files.',
+        canonical: 'https://privacykit.in/tools/document-metadata-cleaner'
       },
       '/tools/url-privacy-cleaner': {
         title: 'URL Privacy & Tracker Cleaner — PrivacyKit',
@@ -216,7 +220,7 @@ export default function App() {
         canonical: 'https://privacykit.in/tools/audio-metadata-cleaner'
       },
       '/tools/password-generator': {
-        title: 'CSPRNG Password & Diceware Passphrase Generator — PrivacyKit',
+        title: 'Password, Passphrase & Username Generator — PrivacyKit',
         desc: 'Generate cryptographically secure passwords, high-entropy Diceware passphrases, and private aliases directly in your browser.',
         canonical: 'https://privacykit.in/tools/password-generator'
       },
@@ -319,10 +323,12 @@ export default function App() {
       return <PrivacyCheckupView onNavigate={handleNavigate} />;
     } else if (path.startsWith('/tools/exif-remover')) {
       return <ExifRemoverView onNavigate={handleNavigate} />;
+    } else if (path.startsWith('/tools/document-metadata-cleaner')) {
+      return <UnifiedDocCleanerView onNavigate={handleNavigate} defaultFormatFilter="all" />;
     } else if (path.startsWith('/tools/pdf-metadata-cleaner')) {
-      return <PdfCleanerView onNavigate={handleNavigate} />;
+      return <UnifiedDocCleanerView onNavigate={handleNavigate} defaultFormatFilter="pdf" />;
     } else if (path.startsWith('/tools/doc-metadata-cleaner')) {
-      return <DocCleanerView onNavigate={handleNavigate} />;
+      return <UnifiedDocCleanerView onNavigate={handleNavigate} defaultFormatFilter="office" />;
     } else if (path.startsWith('/tools/url-privacy-cleaner')) {
       return <UrlCleanerView onNavigate={handleNavigate} />;
     } else if (path.startsWith('/tools/audio-metadata-cleaner')) {
